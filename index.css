@@ -147,7 +147,7 @@ a.active,a:hover{
   justify-content: center;
 }
 .manual-btn{
-  border: 2px solid blue;
+  border: 2px solid white;
   padding: 5px;
   padding-right: 5px;
   border-radius: 10px;
@@ -159,7 +159,7 @@ a.active,a:hover{
 }
 
 .manual-btn:hover{
-  background: yellow;
+  background: grey;
 }
 
 #radio1:checked ~ .first{
@@ -184,7 +184,7 @@ a.active,a:hover{
 }
 
 .navigation-auto div{
-  border: 2px solid blue;
+  border: 2px solid white;
   padding-right: 10px;
   padding: 5px;
   border-radius: 10px;
@@ -196,16 +196,16 @@ a.active,a:hover{
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-  background: pink;
+  background: black;
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-  background: pink;
+  background: black;
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-  background: pink;
+  background: black;
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
-  background: pink;
+  background: black;
 }
 
 .cards{
@@ -262,7 +262,7 @@ a.active,a:hover{
   grid-area: stats;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  background: #6E8A8A;
+  background: #435252;
   padding: 8px;
 }
 .card-more a{

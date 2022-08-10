@@ -1,0 +1,283 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Awesome;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+nav{
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: white;
+  color: black;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: yellow;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+
+.slideshow body{
+  font-family: Awesome;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightblue;
+}
+
+.slider{
+  width: 99.6%;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.2%;
+}
+
+.slides{
+  width: 100%;
+  height: 600px;
+  display: flex;
+
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 100%;
+  transition: 2s;
+}
+
+.slide img{
+  height: 600px;
+}
+
+.navigation-manual{
+  position: absolute;
+  width: 100%;
+  margin-top: 560px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn{
+  border: 2px solid blue;
+  padding: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: yellow;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -100%;
+}
+#radio3:checked ~ .first{
+  margin-left: -200%;
+}
+#radio4:checked ~ .first{
+  margin-left: -300%;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 560px;
+}
+
+.navigation-auto div{
+  border: 2px solid blue;
+  padding-right: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: pink;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: pink;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: pink;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: pink;
+}
+
+.cards{
+  display: flex;
+  position: absolute;
+  object-position: center;
+  width: 100%;
+}
+.card{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 210px 180px 50px;
+  grid-template-areas: "image" "text" "stats";
+  width: 20%;
+
+  font-family: roboto;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px black;
+  text-align: center;
+
+  margin: 2.5%;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.card-image{
+  grid-area: image;
+  background: url("img1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-text{
+  grid-area: text;
+}
+.card-text .date{
+  color: red;
+  font-size: 13px;
+}
+.card-text p{
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.card-text h2{
+  margin-top: 0px;
+  font-size: 28px;
+}
+.card-more{
+  grid-area: stats;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: #6E8A8A;
+  padding: 8px;
+}
+.card-more a{
+  color: white;
+  font-size: 140%;
+}
+.card-more:hover{
+  background: black;
+}
+.card-more a:hover{
+    background: none;
+    color: white;
+  }
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px black;
+}
+

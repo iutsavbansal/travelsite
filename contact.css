@@ -18,6 +18,8 @@ nav{
   background: black;
   height: 80px;
   width: 100%;
+  z-index: 1;
+  position: relative;
 }
 label.logo{
   color: white;
@@ -123,7 +125,7 @@ a.active,a:hover{
 .contact .content p
 {
   font-weight: 300;
-  color: white;
+  color: #FADCFF;
 }
 .container
 {
@@ -161,14 +163,14 @@ a.active,a:hover{
   display: flex;
   margin-left: 20px;
   font-size: 16px;
-  color: white;
+  color: #FADCFF;
   flex-direction: column;
   font-weight: 300;
 }
 .container .contactInfo .box .text h3
 {
   font-weight: 500;
-  color: lightblue;
+  color: white;
 }
 .contactForm
 {
@@ -196,7 +198,7 @@ a.active,a:hover{
   font-size: 16px;
   margin: 10px 0;
   border: none;
-  border-bottom: 2px solid lightblue;
+  border-bottom: 2px solid #CA7B04;
   outline: none;
   resize: none;
 }
@@ -223,7 +225,7 @@ a.active,a:hover{
 .contactForm .inputBox input[type="submit"]
 {
   width: 100px;
-  background: lightblue;
+  background: #CA7B04;
   color: white;
   border: none;
   cursor: pointer;

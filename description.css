@@ -15,6 +15,8 @@ nav{
   background: black;
   height: 80px;
   width: 100%;
+  z-index: 1;
+  position: relative;
 }
 label.logo{
   color: white;
@@ -184,13 +186,25 @@ section .card .image img{
 .card .rating{
   display: flex;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
 .card .rating i{
-  font-size: 18px;
+  font-size: 15px;
   margin: 0 2px;
   color: goldenrod;
+}
+
+.card .price{
+  display: flex;
+  margin-top: 12px;
+  color:  black;
+  font-size: 20px;
+}
+
+.price .pricet{
+  text-align: left;
+  padding-right: 5px;
 }
 
 .card .button{
